@@ -1,1 +1,528 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/W3Ccssfilea.css">
+    <script src="js/Html5Jstest1.js"></script>
+
+
+</head>
+<body>
+
+
+
+
+<hr />
+<h1>HTML 5 Video</h1>
+
+<br />
+<video src="mp3/classlisteen.mp4"  width="620" height="540" controls="controls">
+    Your browser does not support the video tag.
+</video>
+
+
+<hr />
+<h1>HTML 5 Video  + DOM</h1>
+
+<br />
+
+<div style="text-align:center;">
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">大</button>
+    <button onclick="makeNormal()">中</button>
+    <button onclick="makeSmall()">小</button>
+    <br />
+    <video id="video1" width="420" style="margin-top:15px;">
+        <source src="mp3/classlisteen.mp4" type="video/mp4" />
+        <source src="/example/html5/mov_bbb.ogg" type="video/ogg" />
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+
+<script type="text/javascript">
+    var myVideo=document.getElementById("video1");
+
+    function playPause()
+    {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+
+    function makeBig()
+    {
+        myVideo.width=560;
+    }
+
+    function makeSmall()
+    {
+        myVideo.width=320;
+    }
+
+    function makeNormal()
+    {
+        myVideo.width=420;
+    }
+</script>
+
+
+<hr />
+<h1>HTML 5 音频</h1>
+
+<br />
+<audio src="mp3/background.mp3" controls="controls">
+    Your browser does not support the audio element.
+</audio>
+
+
+
+<hr />
+<h1>HTML 5 拖放</h1>
+
+<br />
+
+<p>请把 图片拖放到矩形中：</p>
+
+<div id="div-drag-1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br />
+<img id="drag1" src="images/tulip_flaming_club_s.jpg" draggable="true" ondragstart="drag(event)" />
+
+<br />
+
+
+<div id="div-drag-2" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="images/tulip_flaming_club_s.jpg" draggable="true" ondragstart="drag(event)" id="drag2" />
+</div>
+<div id="div-drag-3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+<hr />
+<h1>实例 - 线条</h1>
+
+<br />
+
+
+
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+
+    var c=document.getElementById("myCanvas");
+    var cxt=c.getContext("2d");
+    cxt.moveTo(10,10);
+    cxt.lineTo(150,50);
+    cxt.lineTo(10,50);
+    cxt.stroke();
+
+</script>
+
+<hr />
+<h1>实例 - 圆形</h1>
+
+<br />
+<pre>
+
+
+</pre>
+
+<canvas id="myCanvas-2" width="200" height="100" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+
+    var c=document.getElementById("myCanvas-2");
+    var cxt=c.getContext("2d");
+    cxt.fillStyle="#FF0000";
+    cxt.beginPath();
+    cxt.arc(70,18,15,0,Math.PI*2,true);
+    cxt.closePath();
+    cxt.fill();
+
+</script>
+
+<hr />
+<h1>实例 - 绘制渐变背景</h1>
+<br />
+<pre>
+
+
+</pre>
+
+<canvas id="myCanvas-3" width="200" height="100" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+
+
+<script type="text/javascript">
+
+    var c=document.getElementById("myCanvas-3");
+    var cxt=c.getContext("2d");
+    var grd=cxt.createLinearGradient(0,0,175,50);
+    grd.addColorStop(0,"#FF0000");
+    grd.addColorStop(1,"#00FF00");
+    cxt.fillStyle=grd;
+    cxt.fillRect(0,0,175,50);
+
+</script>
+
+
+<hr />
+<h1>实例 -  图像</h1>
+<br />
+<pre>
+
+
+    要刷新一遍
+</pre>
+
+<canvas id="myCanvas-4" width="200" height="200" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+
+    var c=document.getElementById("myCanvas-4");
+    var cxt=c.getContext("2d");
+    var img=new Image()
+    img.src="images/tulip_ballade_s.jpg"
+    cxt.drawImage(img,0,0);
+
+</script>
+
+
+<hr />
+<h1>HTML5 内联 SVG</h1>
+<br />
+<pre>
+
+
+HTML5 支持内联 SVG。
+什么是SVG？
+
+    SVG 指可伸缩矢量图形 (Scalable Vector Graphics)
+    SVG 用于定义用于网络的基于矢量的图形
+    SVG 使用 XML 格式定义图形
+    SVG 图像在放大或改变尺寸的情况下其图形质量不会有损失
+    SVG 是万维网联盟的标准
+
+SVG 的优势
+
+与其他图像格式相比（比如 JPEG 和 GIF），使用 SVG 的优势在于：
+
+    SVG 图像可通过文本编辑器来创建和修改
+    SVG 图像可被搜索、索引、脚本化或压缩
+    SVG 是可伸缩的
+    SVG 图像可在任何的分辨率下被高质量地打印
+    SVG 可在图像质量不下降的情况下被放大
+
+   <h3>SVG 形状 </h3>
+
+SVG 有一些预定义的形状元素，可被开发者使用和操作：
+
+    矩形 < rect >
+    圆形 < circle >
+    椭圆 < ellipse >
+    线 < line >
+    折线 < polyline >
+    多边形 < polygon >
+    路径 < path >
+
+<h3>SVG 教程:</h3>
+http://www.w3school.com.cn/svg/index.asp
+
+把 SVG 直接嵌入 HTML 页面
+
+在 HTML5 中，您能够将 SVG 元素直接嵌入 HTML 页面中
+</pre>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+    <polygon points="100,10 40,180 190,60 10,60 160,180"
+             style="fill:red;stroke:blue;stroke-width:3;fill-rule:evenodd;" />
+</svg>
+
+
+<hr />
+<h1>HTML 5 Canvas vs. SVG</h1>
+<br />
+<pre>
+
+
+Canvas 和 SVG 都允许您在浏览器中创建图形，但是它们在根本上是不同的。
+SVG
+
+SVG 是一种使用 XML 描述 2D 图形的语言。
+
+SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。
+
+在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。
+Canvas
+
+Canvas 通过 JavaScript 来绘制 2D 图形。
+
+Canvas 是逐像素进行渲染的。
+
+在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
+Canvas 与 SVG 的比较
+
+下表列出了 canvas 与 SVG 之间的一些不同之处。
+Canvas
+
+    依赖分辨率
+    不支持事件处理器
+    弱的文本渲染能力
+    能够以 .png 或 .jpg 格式保存结果图像
+    最适合图像密集型的游戏，其中的许多对象会被频繁重绘
+
+SVG
+
+    不依赖分辨率
+    支持事件处理器
+    最适合带有大型渲染区域的应用程序（比如谷歌地图）
+    复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）
+    不适合游戏应用
+
+
+</pre>
+
+
+<hr />
+<h1>HTML5 - 使用地理定位</h1>
+<br />
+
+<p id="demo">点击这个按钮，获得您的坐标：</p>
+<button onclick="getLocation()">试一下</button>
+<script>
+    var x=document.getElementById("demo");
+    function getLocation()
+    {
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+        }
+        else{x.innerHTML="Geolocation is not supported by this browser.";}
+    }
+    function showPosition(position)
+    {
+        x.innerHTML="Latitude: " + position.coords.latitude +
+                "<br />Longitude: " + position.coords.longitude;
+    }
+    function showError(error)
+    {
+        switch(error.code)
+        {
+            case error.PERMISSION_DENIED:
+                x.innerHTML="User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML="Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML="The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML="An unknown error occurred."
+                break;
+        }
+    }
+</script>
+
+
+
+<hr />
+<h1>HTML 5 Web 存储</h1>
+<br />
+
+<pre>
+
+
+localStorage 方法
+
+localStorage 方法存储的数据没有时间限制。第二天、第二周或下一年之后，数据依然可用。
+
+如何创建和访问 localStorage：
+
+</pre>
+
+
+
+<p class="blue">刷新页面会看到计数器在增长。</p>
+<script type="text/javascript">
+
+    if (localStorage.pagecount)
+    {
+        localStorage.pagecount=Number(localStorage.pagecount) +1;
+    }
+    else
+    {
+        localStorage.pagecount=1;
+    }
+    document.write("该页面已经刷新了  " + localStorage.pagecount + " 次 time(s).localStorage");
+
+</script>
+
+
+
+<p class="blue">请关闭浏览器窗口，然后再试一次，计数器会继续计数。</p>
+
+
+<pre>
+
+sessionStorage 方法
+
+sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。
+
+如何创建并访问一个 sessionStorage：
+
+</pre>
+
+<p class="blue">刷新页面会看到计数器在增长。</p>
+<script type="text/javascript">
+
+    if (sessionStorage.pagecount)
+    {
+        sessionStorage.pagecount=Number(sessionStorage.pagecount) +1;
+    }
+    else
+    {
+        sessionStorage.pagecount=1;
+    }
+    document.write("该页面已经刷新了 " + sessionStorage.pagecount + " 次 time(s) this session.");
+
+</script>
+
+
+
+<p class="blue">请关闭浏览器窗口，然后再试一次，计数器已经重置了。</p>
+
+
+
+
+<hr />
+<h1>HTML 5 应用程序缓存</h1>
+<br />
+
+
+
+
+
+<hr />
+<h1>接收 Server-Sent 事件通知</h1>
+<br />
+
+
+<h1>获得服务器更新</h1>
+<div id="result"></div>
+
+<script>
+    if(typeof(EventSource)!=="undefined")
+    {
+        var source=new EventSource("PHPfiles/PHPtet.php");
+        source.onmessage=function(event)
+        {
+            document.getElementById("result").innerHTML+=event.data + "<br />";
+        };
+    }
+    else
+    {
+        document.getElementById("result").innerHTML="Sorry, your browser does not support server-sent events...";
+    }
+</script>
+
+
+
+<hr />
+<h1>HTML5 Input 类型</h1>
+<br />
+
+<pre>
+
+    本章全面介绍这些新的输入类型：
+
+    email
+    url
+    number
+    range
+    Date pickers (date, month, week, time, datetime, datetime-local)
+    search
+    color
+
+
+</pre>
+
+<pre>
+
+
+    电子邮件：
+
+
+</pre>
+
+
+
+<form action="/example/html5/demo_form.asp" method="get">
+    E-mail: <input type="email" name="user_email" /><br />
+    <input type="submit" />
+</form>
+
+<form action="/example/html5/demo_form.asp" method="get">
+    Homepage: <input type="url" name="user_url" /><br />
+    <input type="submit" />
+</form>
+
+
+<form action="/example/html5/demo_form.asp" method="get">
+    Points: <input type="number" name="points" min="1" max="10" />
+    <input type="submit" />
+</form>
+
+
+
+<form action="/example/html5/demo_form.asp" method="get">
+    Points: <input type="range" name="points" min="1" max="10" />
+    <input type="submit" />
+</form>
+
+<form action="/example/html5/demo_form.asp" method="get">
+    Date: <input type="date" name="user_date" />
+    <input type="submit" />
+</form>
+
+<pre>
+
+
+    autofocus 属性规定在页面加载时，域自动地获得焦点。
+
+
+</pre>
+<form action="/example/html5/demo_form.asp" method="get">
+    User name: <input type="text" name="user_name" autofocus="autofocus" />
+    <input type="submit" />
+</form>
+
+
+
+
+
+</body>
+</html>
