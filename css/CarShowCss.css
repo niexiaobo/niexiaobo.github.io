@@ -1,0 +1,24 @@
+.imgreSize {
+	width: 300px;
+	/*text-align:center;*/
+}
+.divCenter {
+	align:center;
+	
+}
+.mainDiv{
+	align="center" 
+}
+.div-relative{position:relative; color:#000; border:1px solid #000; width:300px; } 
+.div-a{
+	 position:absolute; left:0px; top:0px; background:#F00; width:300px; 
+} 
+ 
+.div-b{ 
+	display: block;
+    max-width: 100%;
+    height: auto;
+    } 
+ 
+.div-c{ position:absolute; left:125px; top:80px; width:50px; height:50px} 
+/* DIV背景颜色为蓝色 */ 
