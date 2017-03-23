@@ -17,7 +17,8 @@
 		
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">代码格式</a></li>
+				<li class="current_page_item"><a href="#" accesskey="2" title="">代码架构</a></li>
+				<li><a href="#" accesskey="1" title="">代码格式</a></li>
 				<li><a href="#" accesskey="2" title="">函数调用</a></li>
 				<li><a href="#" accesskey="3" title="">协议 Protocols</a></li>
 				<li><a href="#" accesskey="4" title="">闭包 Blocks</a></li>
@@ -33,7 +34,8 @@
 				<li><a href="#" accesskey="" title="">属性的线程安全</a></li>
 				<li><a href="#" accesskey="" title="">点分语法的使用</a></li>
 				<li><a href="#" accesskey="" title="">Delegate要使用弱引用</a></li>
-				
+				<li><a href="#" accesskey="" title="">代码测试</a></li>
+				<li><a href="#" accesskey="" title="">代码版本管理</a></li> 
 <!--存取方法
 命名委托
 集合操作类方法
@@ -48,6 +50,32 @@
 	</div>
 	
 	<div id="main">
+		<div>
+			<pre>
+				<h3>以下分类是MVC模式,当然还有MVVM等,只作参考,不同团队不一样</h3>
+1.主目录按照业务分类，内目录按照模块分类(主目录按照MVC架构分类，内部根据项目模块分类)
+
+优点：相对比较快定位对应的业务。
+缺点：模块相关类太过分散，需要来回切换寻找文件，不方便开发。
+2.主目录按照模块分类，内目录按照业务分类
+
+优点：对模块的类集中化，方便管理与开发。
+缺点：当几个模块共用一些类时，不太好归类。
+假设对简书iOS应用目录分类(非官方)：
+
+1.主目录按照业务分类，内目录按照模块分类
+				
+			
+			<img src="images/OCMenu1.png" />
+			
+2.主目录按照模块分类，内目录按照业务分类
+			
+			<img src="images/OCMenu2.png" />
+		</pre>	
+		</div>
+		
+		
+		
 			<div id="welcome0">
 				<pre>
 					<h2>代码格式</h2>
@@ -1344,6 +1372,47 @@ Delegate**要使用弱引用**
 </pre>
 </div>	
 
+
+<div>
+<pre>
+	<h3>1.性能测试</h3>
+	测试某一方法运行所消耗的时间 iOS 单元测试--性能测试
+	http://www.jianshu.com/p/3ea8be84f53a
+	<h3>2.单元测试</h3>
+	
+	UnitTest 单元测试  分为3种：
+
+	>>逻辑测试：测试逻辑方法. iOS 单元测试--逻辑测试 - 简书
+	http://www.jianshu.com/p/15f347eb207c
+
+	>>异步测试：测试耗时方法（用来测试包含多线程的方法）: 
+	http://www.jianshu.com/p/a4ffa780d347
+
+	iOS 单元测试--异步测试 - 简书
+	http://www.jianshu.com/p/a4ffa780d347
+
+	简单iOS单元测试-异步测试(XCTestExpectation) - 简书
+	http://www.jianshu.com/p/915cc8830bd2
+	
+	<h3>3.UI测试</h3>
+	iOS 自动化测试 UI Automation - 简书 【xcode 8 找不到 Automation ？】
+	http://www.jianshu.com/p/0e28ae1bd2c2
+	<h3>4.自动化测试</h3>
+</pre>
+</div>
+
+<pre>
+	
+	<h3>1.GIT 代码托管</h3>
+	
+	<h3>2.SVN 代码托管</h3>
+	
+	<h3>3.持续集成工具</h3>
+	例如 CruiseControL，hudson ，jenkins，还有apache的Continuum 等 开源的持续集成工具
+
+	jenkins 配置 : http://www.jianshu.com/p/8d4452c6f17e
+</pre>
+</div>
 
 
 
