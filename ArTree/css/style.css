@@ -967,12 +967,32 @@ h5{
 ================================================== */
 
 .clients{
-	background: #00AEFF;
+	/*background: #00AEFF;*/
+	background:url(../images/bg/bg1.jpg) no-repeat 0px 0px;
+	 
 	color: #fff;
 	padding: 20px 0px 55px;
 }
 .clients-content{
 }
+
+
+.clientHead{
+	/*text-align:center;*/
+}
+.clientHead .PA{
+	/*align:"right";*/
+	align-content: center;
+	text-align:center;
+	/*background-color: #F0AD4E;*/
+	font-size: 25px;
+}
+.clientHead .PB{
+	text-align:center;
+	font-size: 15px;
+}
+
+
 
 .clients h2.title{
 	border-left: 0;
@@ -1211,4 +1231,21 @@ h5{
 #back-top a:hover{
     background: #00AEFF;
     opacity: 1;
+}
+
+/*footer*/
+.contactUS{
+	align-content: center;
+	text-align:center;
+	/*background-color: #F0AD4E;*/
+	font-size: 25px	
+}
+
+
+/*header*/
+.scanCode{
+	padding-top: 50px;
+	width: 100px ;
+    height: 150px; 
+    align-content: center;
 }
