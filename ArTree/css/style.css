@@ -1245,7 +1245,9 @@ h5{
 /*header*/
 .scanCode{
 	padding-top: 50px;
-	width: 100px ;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 130px ;
     height: 150px; 
     align-content: center;
 }
