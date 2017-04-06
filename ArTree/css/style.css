@@ -973,6 +973,13 @@ h5{
 	color: #fff;
 	padding: 20px 0px 55px;
 }
+.clients2{
+	/*background: #00AEFF;*/
+	background:url(../images/bg/compladhyd.png) no-repeat 0px 0px;
+	 
+	color: #fff;
+	padding: 20px 0px 55px;
+}
 .clients-content{
 }
 
