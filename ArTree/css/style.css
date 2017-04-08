@@ -627,6 +627,7 @@ h5{
 #benefit{
 	position: relative;
 	background-image: url("../images/bg/features-bg.jpg");
+	background-color: rgba(100,100,100,0);
 	background-attachment: fixed !important;
 	background-size: cover;
 	background-repeat: repeat;
@@ -665,11 +666,12 @@ h5{
 /*ITEM-right-lits
 ==================================================================*/
 .item-right-list{}
-.item-right-list .col-md-5,.item-right-list .col-md-7{
+.item-right-list .col-md-5,.item-right-list .col-md-7 .col-md-8{
 	padding: 0px;
 }
 .item-right-list .col-md-7{
 	margin-left: -40px;
+	/*margin-left: 0px;*/
 }
 .item-content ul{
 	margin-top: 30px;
@@ -975,7 +977,7 @@ h5{
 }
 .clients2{
 	/*background: #00AEFF;*/
-	background:url(../images/bg/compladhyd.png) no-repeat 0px 0px;
+	background:url(../images/bg/complBgImg.png) no-repeat 0px 0px;
 	 
 	color: #fff;
 	padding: 20px 0px 55px;
