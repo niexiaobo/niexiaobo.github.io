@@ -155,7 +155,7 @@ h5{
 	color: #444;
 }
 .sec-title span{
-	color: #00AEFF;
+	color: #41A4DA;
 }
 
 .heading-inner p{
@@ -1264,4 +1264,42 @@ h5{
 .logo-responsive{
 	width: 30px ;
     height:30px; 
+}
+
+.ClientsDiv{
+	/*background-color: yellow;*/
+	float: left;
+	width: 33%; text-align: center; display: inline;
+}
+
+/*截图*/
+.rowScreensTable {
+	width: 100%;
+}
+
+.rowScreensTable .space{
+	width: 5%;
+}
+.rowScreensTable #support img{
+	width: 90%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.rowScreensTable #supportSpace {
+	width: 100%;
+	height: 20px;
+}
+
+.rowScreensTable #supportDow img{
+	width: 15%;
+	height: 15%;
+	position: relative;
+	left: 10%;
+	/*transform: translateX(-50%);*/
+}
+.rowScreensTable #supportDow label{
+	height: 15%;
+	position: relative;
+	left: 13%;
 }
